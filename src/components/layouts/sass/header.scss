@@ -1,0 +1,60 @@
+.titlebar-container {
+    width: 100vw;
+    height: 20px;
+    display: block;
+
+    .titlebar {
+        width: 100%;
+        position: fixed;
+        background-color: #111A;
+        height: 20px;
+
+        .drag-region {
+            width: 100%;
+            height: 100%;
+            -webkit-app-region: drag;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #999;
+            font-family: 'Graduate', 'Roboto', sans-serif;
+
+            .title {
+                font-size: 15px;
+                transition: color 200ms;
+                text-transform: uppercase;
+            }
+
+            .controls {
+                -webkit-app-region: no-drag;
+                height: 100%;
+                display: flex;
+
+                .btn {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0 5px;
+                    color: #FFF;
+                    user-select: none;
+                    cursor: pointer;
+
+                    svg {
+                        width: 18px;
+                        height: 18px;
+                    }
+
+                    &:hover {
+                        background-color: #222;
+                    }
+    
+                    &.close {
+                        &:hover {
+                            background-color: red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
